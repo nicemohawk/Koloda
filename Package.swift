@@ -12,6 +12,9 @@ let package = Package(
             targets: ["Koloda"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/facebook/pop.git", from: "1.0.12")
+    ],
     targets: [
         .target(
             name: "Koloda",
