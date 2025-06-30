@@ -7,10 +7,7 @@ let package = Package(
         .iOS(.v11)
     ],
     products: [
-        .library(
-            name: "Koloda",
-            targets: ["Koloda"]
-        ),
+        .library(name: "Koloda", targets: ["Koloda"])
     ],
     dependencies: [
         .package(url: "https://github.com/facebook/pop.git", from: "1.0.12")
@@ -18,10 +15,9 @@ let package = Package(
     targets: [
         .target(
             name: "Koloda",
+            dependencies: ["pop"],
             path: "Pod/Classes",
-            exclude: [],
-            sources: ["KolodaView"],
-            publicHeadersPath: ""
+            sources: ["KolodaView"]
         )
     ]
 )
